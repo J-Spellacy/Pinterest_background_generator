@@ -1,5 +1,5 @@
 # Pinterest_background_generator
-Python code to scrape a user's requested data html file and then generate a background, this will hopefully executable in my sway config file at startup to create a new full resolution background each time.
+Python code to scrape a user's requested data html file and then generate a background, this is executable in a sway or hyprland config file at startup to create a new full resolution background each time.
 
 In order to run this code as a script in your window manager config, you need to grant permission to the file with:
 
