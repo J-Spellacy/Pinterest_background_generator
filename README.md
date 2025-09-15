@@ -28,6 +28,19 @@ To test the shell script run the following line in a fresh terminal:
 
 For a hyprland config, I did the following:
 
+Adding the appropriate file paths to hyprpaper (the wallpaper env I use, instructions would be different for others):
+
+```
+preload = /home/user/path_to_file/collage.png
+wallpaper = /home/user/path_to_file/collage.png
+```
+
+Instruct hyprland to run the script before loading hyprpaper:
+
+```
+exec-once = /home/user/path_to_file/run_background.sh
+exec-once = hyprpaper
+```
 
 Here is an example of a background generated with the code and my pinterest, all credit for images to the respective owners on pinterest, link to my pinterest: https://uk.pinterest.com/judespell/_pins/.
 
