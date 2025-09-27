@@ -44,4 +44,7 @@ exec-once = hyprpaper
 
 Here is an example of a background generated with the code and my pinterest, all credit for images to the respective owners on pinterest, link to my pinterest: https://uk.pinterest.com/judespell/_pins/.
 
+
+<img width="1367" height="769" alt="20250927_120004" src="https://github.com/user-attachments/assets/8879db03-f998-48dc-8c94-1d4f0201a1ad" />
+
 <img width="960" height="540" alt="collage_1k" src="https://github.com/user-attachments/assets/249153fe-1c19-42d6-98ab-8b4e74bcb5e4" />
