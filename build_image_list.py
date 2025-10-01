@@ -1,33 +1,29 @@
 import os
 import pickle
+import argparse
 from PIL import Image
 
-FOLDER = '/home/jude/Pictures/pint_pins'
-OUTPUT_LIST = 'images.pkl'
-OUTPUT_LIST_SORTED_W = 'images_sorted_w.pkl'
-OUTPUT_LIST_SORTED_H = 'images_sorted_h.pkl'
+# Inputs from bash script with a default added incase I switch to using jpeg or something
+parser = argparse.ArgumentParser(description="Generate pickle file with image metadata from a folder.")
+parser.add_argument("folder", type=str, help="Path to folder containing images")
+parser.add_argument("--ext", type=str, default=".png", help="Image extension to include (default: .png)")
+args = parser.parse_args()
+
+# file names of pickle files to reflect cluster
+FOLDER = os.path.abspath(args.folder)
+folder_name = os.path.basename(os.path.normpath(FOLDER))
+OUTPUT_LIST = f"images_{folder_name}.pkl"
 
 images = []
 for fname in os.listdir(FOLDER):
-    if fname.lower().endswith('.png'):
+    if fname.lower().endswith(args.ext.lower()):
         path = os.path.join(FOLDER, fname)
         with Image.open(path) as img:
             w, h = img.size
         images.append({'name': fname, 'path': path, 'w': w, 'h': h})
 
-# Save to file (binary format)
+
 with open(OUTPUT_LIST, 'wb') as f:
     pickle.dump(images, f)
 
-
-images_sorted_w = sorted(images, key=lambda im: im['w'])
-images_sorted_h = sorted(images, key=lambda im: im['h'])
-
-with open(OUTPUT_LIST_SORTED_W, 'wb') as f:
-    pickle.dump(images_sorted_w, f)
-
-with open(OUTPUT_LIST_SORTED_H, 'wb') as f:
-    pickle.dump(images_sorted_h, f)
-
 print(f"Saved {len(images)} images to {OUTPUT_LIST}")
-print(f"saved {OUTPUT_LIST_SORTED_W} and {OUTPUT_LIST_SORTED_H}")
