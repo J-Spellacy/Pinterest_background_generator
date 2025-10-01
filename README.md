@@ -1,6 +1,8 @@
 # Pinterest_background_generator
 Python code to scrape a user's requested data html file and then generate a set of backgrounds grouped by colour using k-means clustering, this is executable in a window manager config file at startup to create a new full resolution background each time or in your waybar config as a sequence of changeable backgrounds.
 
+![Demo](background_seq.GIF)
+
 Before editing and using the bash scripts and config files please run pint_scraper.py and png_conv_res_label.py with the following edits:
 
 In pint_scraper.py:
