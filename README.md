@@ -63,8 +63,6 @@ Here is an example of a background generated with the code and my pinterest, all
 
 <img width="1367" height="769" alt="20250927_120004" src="https://github.com/user-attachments/assets/8879db03-f998-48dc-8c94-1d4f0201a1ad" />
 
-<img width="960" height="540" alt="collage_1k" src="https://github.com/user-attachments/assets/249153fe-1c19-42d6-98ab-8b4e74bcb5e4" />
-
 For use in a waybar config with background_seq.sh, you must do the following:
 
 Open background_seq.sh in a text editor or with code -oss and edit the following lines:
